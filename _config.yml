@@ -1,2 +1,36 @@
-server_port:  5000
-auto: true
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 40 # pagination based on number of posts
+paginate_path: "page:num"
+pygments: true
+
+title: H1D
+author:
+  name: H1D
+  email: Suschev.Artem@gmail.com
+  email_md5: fcda4a04ab815c1ab9e5b2327a4350f6
+  github: H1D
+  twitter: asuschev
+  linkedin: pub/artem-sushchev/49/308/620/
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+# BASE_PATH: http://H1D.github.io
+
+# All links will be namespaced by BASE_PATH if defined.
+# Links in your website should always be prefixed with {{ site.BASE_PATH }}
+# Do not put a "/" at the end of the url.
+#
+# CNAME (http://yourcustomdomain.com)
+#   DO NOT SET BASE_PATH JUST LEAVE IT BLANK 
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Pages (http://username.github.io)
+#   DO NOT SET BASE_PATH JUST LEAVE IT BLANK 
+#   (urls will be prefixed with "/" and work relatively)
+#
+# GitHub Project Pages (http://username.github.io/project-name)
+#  A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
+#  REQUIRED! Set BASE_PATH to "http://username.github.io/project-name"

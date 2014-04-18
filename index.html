@@ -1,28 +1,49 @@
 ---
+layout: page
+title: H1D's blog
+tagline:
 ---
 
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" href="/css/site.css">
-	<script src="/js/site.js"></script>
-	<title>My Blog</title>
-</head>
-<body>
-	<header>
-		{% include header.html %}
-	</header>
-	<div class="container">
-		{% for post in site.posts %}
-			<article>
-				<h1><a href="{{ site.base_url }}{{ post.url }}">{{ post.title }}</a></h1>
-				<p>{{ post.date | date_to_string }}</p>
-				<p>{{ post.content }}</p>
-			</article>
-		{% endfor %}
-	</div>
-	<footer>
-		{% include footer.html %}
-	</footer>
-</body>
-</html>
+<ul class="articles">
+{% for post in paginator.posts %}
+
+        <li class="article home">
+            <a href="{{ site.BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+            <span class="post-date">
+                {{ post.date | date: "%d/%b/%Y" }}
+            </span>
+        </li>
+{% endfor %}
+</ul>
+
+<ul class="pager"> 
+
+  {% if paginator.previous_page %}
+    <li class="previous">
+      {% if paginator.previous_page == 1 %}
+        <a href="{{ site.BASE_PATH }}/">&larr; Newer</a>
+      {% else %}
+        <a href="{{ site.BASE_PATH }}/page{{ paginator.previous_page }}">&larr; Newer</a>
+      {% endif %}
+    </li>
+  {% else %}
+    <li class="previous disabled">
+      <a>&larr; Newer</a>
+    </li>
+  {% endif %}
+  
+  <li>
+          <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  </li>
+
+  {% if paginator.next_page %}
+    <li class="next">
+            <a href="{{ site.BASE_PATH }}/page{{ paginator.next_page }}">Older &rarr;</a>
+    </li>
+  {% else %}
+    <li class="next disabled">
+            <a>Older &rarr;</a>        
+    </li>
+  {% endif %}
+
+</ul>
