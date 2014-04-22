@@ -16,6 +16,8 @@ author:
 rss_path: feed.xml
 categories_path: categories.html
 tags_path: tags.html
+projects_path: projects.html
+speeches_path: speeches.html
 
 # BASE_PATH: http://H1D.github.io
 
