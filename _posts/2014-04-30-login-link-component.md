@@ -7,7 +7,7 @@ fullview: true
 
 This post describes how to create emberjs component `login-link`. This component acts like normal link or opens a pop-up depending on situation.
 
-In [stepic](stepic.org) we do support anonymous users -– you can go through steps, solve quizzes and progress will be saved (as long as cookie alive). But anyway we gently nudge user to register or login. We have "please login" links spread over application. To make login process seamless and not bothering we redirect user back after login.
+In [stepic](stepic.org) we do support anonymous users — you can go through steps, solve quizzes and progress will be saved (as long as cookie alive). But anyway we gently nudge user to register or login. We have "please login" links spread over application. To make login process seamless and not bothering we redirect user back after login.
 
 Problem is that stepic may also be embedded into iframe on third-party website. In this case we don't want to redirect user to login page (many reasons..) but open a pop-up window with login page.
 
@@ -16,6 +16,11 @@ Decision we came up with is to implement `login-link` component and use it inste
 Here is source code:
 
 <script src="https://gist.github.com/H1D/edc5aa74f4ef8c35e43c.js"></script>
+
+And here is how we use it:
+```
+	To save your progress please {{#login-link}}log in{{/login-link}} first.
+```
 
 ###How it works
 `login()` method returns promise which resolving only when `App` really has `user` object loaded.
