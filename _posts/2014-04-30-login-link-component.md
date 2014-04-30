@@ -11,7 +11,7 @@ In [stepic](stepic.org) we do support anonymous users — you can go through ste
 
 Problem is that stepic may also be embedded into iframe on third-party website. In this case we don't want to redirect user to login page (many reasons..) but open a pop-up window with login page.
 
-Decision we came up with is to implement `login-link` component and use it instead of `{{"{{link-to ...""}}}}`.
+Decision we came up with is to implement `login-link` component and use it instead of `{{"{{link-to ..."}}}}`.
 
 Here is source code:
 
@@ -19,7 +19,7 @@ Here is source code:
 
 And here is how we use it:
 ```
-	To save your progress please {{#login-link}}log in{{/login-link}} first.
+To save your progress please {{"{{#login-link"}}}}log in{{"{{/login-link"}}}} first.
 ```
 
 ###How it works
