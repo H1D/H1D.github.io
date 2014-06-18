@@ -26,4 +26,4 @@ $.ajaxSettings.xhr = function() {
 Now you can use `$.ajax()` as usual!
 
 ## Update
-If ypu need cookie support. Use [xmlhttprequest-cookie](https://www.npmjs.org/package/xmlhttprequest-cookie) insted.
+If you need cookie support use [xmlhttprequest-cookie](https://www.npmjs.org/package/xmlhttprequest-cookie) instead.
